@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+        if UserDefaults.standard.bool(forKey: Constants.shared.selectedLanguage) == true{
+        let stoaryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = stoaryboard.instantiateViewController(withIdentifier: "vc") as? MainVC
+            window?.rootViewController = vc
+        }
+        
         return true
     }
 

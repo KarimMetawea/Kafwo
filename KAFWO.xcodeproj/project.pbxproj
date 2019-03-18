@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D922275D2240142400D2A4B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D922275C2240142400D2A4B3 /* Constants.swift */; };
 		D94EF65B223D47160034EE9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94EF65A223D47160034EE9B /* AppDelegate.swift */; };
 		D94EF65D223D47160034EE9B /* ChooseLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94EF65C223D47160034EE9B /* ChooseLanguageVC.swift */; };
 		D94EF660223D47160034EE9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94EF65E223D47160034EE9B /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D922275C2240142400D2A4B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D94EF657223D47160034EE9B /* KAFWO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAFWO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94EF65A223D47160034EE9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94EF65C223D47160034EE9B /* ChooseLanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageVC.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				D94EF67E223D99500034EE9B /* LocalizationSystem.swift */,
+				D922275C2240142400D2A4B3 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				D94EF67B223D8ED40034EE9B /* MainVC.swift in Sources */,
 				D94EF670223D48660034EE9B /* LanguageButton.swift in Sources */,
 				D94EF65B223D47160034EE9B /* AppDelegate.swift in Sources */,
+				D922275D2240142400D2A4B3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
