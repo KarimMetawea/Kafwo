@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="E5a-IT-jd1">
                                 <rect key="frame" x="20" y="762" width="374" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Kx-sT-FXX" customClass="LanguageButton" customModule="KAFWO" customModuleProvider="target">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Kx-sT-FXX" customClass="LanguageButton" customModule="KAFWO" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
@@ -29,7 +29,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="englishBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s7v-0v-23d"/>
+                                            <action selector="btnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mzs-dB-lBd"/>
                                             <segue destination="6Rn-c1-dmx" kind="show" id="n8r-cu-CBQ"/>
                                         </connections>
                                     </button>
@@ -41,7 +41,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="arabicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tMo-rs-9e4"/>
+                                            <action selector="btnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpQ-H7-0Il"/>
                                             <segue destination="6Rn-c1-dmx" kind="show" id="sYg-qs-ctI"/>
                                         </connections>
                                     </button>

@@ -11,6 +11,7 @@ import UIKit
 class MainVC: UIViewController {
 
     @IBOutlet weak var nameLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        nameLbl.text = LocalizationSystem.sharedInstance.localizedStringForKey(key: "Text-inLabel", comment: "my name")

@@ -14,11 +14,11 @@ class ChooseLanguageVC: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if LocalizationSystem.sharedInstance.getLanguage() == "ar"{
-//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "vc") as! MainVC
-//            let appDlg = UIApplication.shared.delegate as? AppDelegate
-//            appDlg?.window?.rootViewController = vc
-//        }
+        if UserDefaults.standard.bool(forKey: "appLanguageChoosed") == true {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "vc") as! MainVC
+            let appDlg = UIApplication.shared.delegate as? AppDelegate
+            appDlg?.window?.rootViewController = vc
+        }
         UIView.appearance().semanticContentAttribute = .forceLeftToRight
         
         
@@ -26,15 +26,18 @@ class ChooseLanguageVC: UIViewController {
     
 
 
-    @IBAction func arabicBtnPressed(_ sender: Any) {
+    @IBAction func btnPressed(_ sender: UIButton) {
+        UserDefaults.standard.set(true, forKey: "appLanguageChoosed")
+        if sender.tag == 0 {
+            LocalizationSystem.sharedInstance.setLanguage(languageCode: "ar")
+
+        }else {
+            LocalizationSystem.sharedInstance.setLanguage(languageCode: "en")
+        }
         
-        LocalizationSystem.sharedInstance.setLanguage(languageCode: "ar")
-        
-    }
-    @IBAction func englishBtnPressed(_ sender: Any) {
-        LocalizationSystem.sharedInstance.setLanguage(languageCode: "en")
 
     }
+    
     
 }
 
