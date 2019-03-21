@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E29DF3D5966128C5A1278DF /* Pods_KAFWO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B20C3DE4140FD0D940B0AA1 /* Pods_KAFWO.framework */; };
 		D922275D2240142400D2A4B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D922275C2240142400D2A4B3 /* Constants.swift */; };
 		D94EF65B223D47160034EE9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94EF65A223D47160034EE9B /* AppDelegate.swift */; };
 		D94EF65D223D47160034EE9B /* ChooseLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94EF65C223D47160034EE9B /* ChooseLanguageVC.swift */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B20C3DE4140FD0D940B0AA1 /* Pods_KAFWO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAFWO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		278650510D03FD8FBE30DB87 /* Pods-KAFWO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAFWO.debug.xcconfig"; path = "Target Support Files/Pods-KAFWO/Pods-KAFWO.debug.xcconfig"; sourceTree = "<group>"; };
+		D1FD3AE0F2090457E56C0E78 /* Pods-KAFWO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAFWO.release.xcconfig"; path = "Target Support Files/Pods-KAFWO/Pods-KAFWO.release.xcconfig"; sourceTree = "<group>"; };
 		D922275C2240142400D2A4B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D94EF657223D47160034EE9B /* KAFWO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAFWO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94EF65A223D47160034EE9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,17 +46,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E29DF3D5966128C5A1278DF /* Pods_KAFWO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		824B4FFAC203E72FACE20BF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B20C3DE4140FD0D940B0AA1 /* Pods_KAFWO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D069164D4863B098EA649EC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				278650510D03FD8FBE30DB87 /* Pods-KAFWO.debug.xcconfig */,
+				D1FD3AE0F2090457E56C0E78 /* Pods-KAFWO.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D94EF64E223D47160034EE9B = {
 			isa = PBXGroup;
 			children = (
 				D94EF659223D47160034EE9B /* KAFWO */,
 				D94EF658223D47160034EE9B /* Products */,
+				D069164D4863B098EA649EC3 /* Pods */,
+				824B4FFAC203E72FACE20BF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D94EF669223D47170034EE9B /* Build configuration list for PBXNativeTarget "KAFWO" */;
 			buildPhases = (
+				2AB5E55F82608870C3180D5B /* [CP] Check Pods Manifest.lock */,
 				D94EF653223D47160034EE9B /* Sources */,
 				D94EF654223D47160034EE9B /* Frameworks */,
 				D94EF655223D47160034EE9B /* Resources */,
+				E59530D0211E25C1CA128CA7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,6 +208,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AB5E55F82608870C3180D5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KAFWO-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E59530D0211E25C1CA128CA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KAFWO/Pods-KAFWO-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KAFWO/Pods-KAFWO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D94EF653223D47160034EE9B /* Sources */ = {
@@ -349,6 +423,7 @@
 		};
 		D94EF66A223D47170034EE9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 278650510D03FD8FBE30DB87 /* Pods-KAFWO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +441,7 @@
 		};
 		D94EF66B223D47170034EE9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1FD3AE0F2090457E56C0E78 /* Pods-KAFWO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

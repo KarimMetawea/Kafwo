@@ -7,9 +7,9 @@
 //
 
 import Foundation
-class Constants {
-    static let shared = Constants()
-    let selectedLanguage = "appLanguageChoosed"
+struct Constants {
+    
+    static  let selectedLanguage = "appLanguageChoosed"
     
     
 }
